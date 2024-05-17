@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Upscaler</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="enhance-image-button">
+        <h1>Enhance Images with AI</h1>
+        <div class="button-and-image">
+            <div class="buttons">
+                <form id="upload-form" class="upload-form" enctype="multipart/form-data" action="/" method="POST">
+                    <input type="file" name="image" id="image-input" accept="image/*">
+                    <button type="button" id="upload-button">Upload Image</button>
+                    <div id="enhance-options" style="display: none;">
+                        <button type="submit" id="enhance-button">Enhance Image</button>
+                    </div>
+                </form>
+            </div>
+            <div class="image-container" id="image-container">
+                <span id="upload-text">Upload Image</span>
+            </div>
+        </div>
+        <div id="loading-bar" style="display: none;">Enhancing...</div>
+    </div>
+
+    <div id="image-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <div class="before-after">
+                <div class="before">
+                    <h3>Before</h3>
+                    <img id="before-image" src="" alt="Before Image">
+                </div>
+                <div class="after">
+                    <h3>After</h3>
+                    <img id="after-image" src="" alt="After Image">
+                </div>
+            </div>
+            <a id="download-button" href="enhanced_image.png" download="enhanced_image.png">Download Enhanced Image</a>
+        </div>
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
