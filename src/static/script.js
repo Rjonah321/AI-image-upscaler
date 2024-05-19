@@ -75,3 +75,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+const loadingBar = document.querySelector('#loading-bar');
+const loadingBarFill = document.querySelector('.loading-bar-fill');
+
+const enhanceButton = document.querySelector('#enhance-button');
+enhanceButton.addEventListener('click', () => {
+    loadingBar.style.display = 'block';
+    loadingBarFill.style.animationPlayState = 'running';
+});

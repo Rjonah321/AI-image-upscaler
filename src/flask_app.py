@@ -1,5 +1,6 @@
 import os
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+print("Initializing Flask app, please wait.")
 
 from flask import Flask, render_template, request, send_file, jsonify
 from models.predict import enhance_image
@@ -34,4 +35,4 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(use_reloader=False, use_debugger=False)
