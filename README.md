@@ -5,10 +5,23 @@ A DSRCNN model with a Flask frontend for image upscaling.
 
 ## Installation
 
+### Exe version
+
 1. Download `flask_app.exe`.
 2. Run `flask_app.exe`.
 3. Copy and paste the generated URL into your browser.
 4. Enjoy.
+
+### Docker version
+
+1. Make sure you have Docker installed on your system.
+2. Download `flask_app.tar`.
+3. Open a terminal in the directory of `flask_app.tar`.
+4. Run the command: `docker load -i flask_app.tar`.
+5. Open the docker desktop app run `flask_app`.
+6. Make sure to set `Host Port` to `5000`.
+7. Click the generated link or paste it into your browser.
+8. Enjoy.
 
 ## Usage
 To use the project, simply upload an image and click the "Enhance Image" button.
